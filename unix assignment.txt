@@ -1,0 +1,121 @@
+DAY-1 Task
+
+Try slide no-41
+
+1-->mkdir test
+2-->cat >employeelist
+    cat >skillset
+3-->mkdir test2
+    ls -s skillset symskillset , ls skillset hardskillset
+    rm skillset
+    A symbolic is an actual link to the original file, whereas a hard link is a mirror copy of the original file.
+    If you delete the original file, the soft link has no value, because it points to a non-existent file.
+    But in the case of hard link, it is entirely opposite. Even if you delete the original file, 
+    the hard link will still has the data of the original file. Because hard link acts as a mirror copy of the original file.
+4-->chmod g+wr test
+5-->chmod g-w test
+6-->chmod O+w file1
+7-->chmod O-w file1
+8-->chgrp user3 employeelist
+9-->chown user5 employeelist
+10-->wc -l employeelist
+
+
+Try slide no-47
+
+-->cat >file1
+-->cat >>file1
+-->cat >file2
+-->cat file1 file2
+-->cat file1 >file2
+-->cat file1 file2 >file3
+-->cat file1 file2 file3 file4 file5
+-->cat file1 file2 file3 file4 file5
+   2>errorlog
+-->cat file1 file2 file3 file4 file5 >file10
+   2>&1
+-->cp file1 file6 2>&errorlog
+
+
+DAY-2 Task
+
+Try slide no-55
+
+-->head -n +25 file1 | tail -15
+-->head -n +10 file1 | tail -1
+-->find. -type -ctime -1 -ls
+-->ls -lsr
+-->grep -c ".*" file11
+-->find . -iname "*" -mtime +3 -exec cat {} \;
+
+Try slide no-61
+
+-->Lines containing A
+	grep "A" file
+
+-->lines containing The at the beginning
+	grep "^The" file
+
+-->lines  ending with  .	
+	grep "\.$" file
+
+-->lines with a,b or c as the second letter
+	grep "^.a\|b\|c" File11
+
+-->lines which contain def , deef or deeeef 
+	grep  "def\|deef\|deeeef" File
+
+-->lines not having numbers at the beginning 
+	grep -v [0-9] File
+
+-->empty lines
+	grep -n "^$" File
+
+-->list the passworf file details of user1 - user10
+        grep "[user1-user10]"password
+
+-->list only directories
+	ls -1 |grep ^d
+
+-->list out the C program in the current directory which are using math library file
+        ls -1 |grep math.h
+
+
+Try slide no-63
+
+Create a file which contains long listing of the files in root directory
+	
+
+Sort the file based on the filename descending order (last field)
+	ls | sort -r
+
+Sort the file based only on the inode count
+	ls -li | sort -n
+
+Sort the file based on the user name and group name in reverse order
+	ls -lr | sort -k 3
+	ls -lr | sort -k 4
+
+Sort the file based on the file size and store the output in a file called sortedfile
+	ls -laS >sortedfile
+	cat sortedfile
+
+Try slide no-91
+
+1-->vi try91
+then press i and insert the content
+
+
+Try slide no-92
+
+1-->press O(capital)
+2-->go to second line ->dd->u
+3-->:/bc
+4-->go to word number->dw
+5-->:1,1s/c/c/g
+6-->:1,$s/ /\t/g
+
+
+
+
+
